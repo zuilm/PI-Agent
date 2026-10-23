@@ -1,0 +1,371 @@
+TAP version 13
+# {"level":30,"time":1792654664848,"pid":37884,"hostname":"yuhang","reqId":"req-1","req":{"method":"GET","url":"/api/health","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# Subtest: health endpoint reports memory sandbox in API test mode
+ok 1 - health endpoint reports memory sandbox in API test mode
+  ---
+  duration_ms: 14.9811
+  type: 'test'
+  ...
+# {"level":30,"time":1792654664850,"pid":37884,"hostname":"yuhang","reqId":"req-1","res":{"statusCode":200},"responseTime":2.344699999999989,"msg":"request completed"}
+# {"level":30,"time":1792654664852,"pid":37884,"hostname":"yuhang","reqId":"req-2","req":{"method":"POST","url":"/api/sessions","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# Subtest: creating a session returns an idle session identifier
+ok 2 - creating a session returns an idle session identifier
+  ---
+  duration_ms: 3.3028
+  type: 'test'
+  ...
+# Subtest: unknown session returns 404
+ok 3 - unknown session returns 404
+  ---
+  duration_ms: 0.4302
+  type: 'test'
+  ...
+# {"level":30,"time":1792654664854,"pid":37884,"hostname":"yuhang","reqId":"req-2","res":{"statusCode":200},"responseTime":2.612700000000018,"msg":"request completed"}
+# {"level":30,"time":1792654664854,"pid":37884,"hostname":"yuhang","reqId":"req-3","req":{"method":"GET","url":"/api/sessions/session_8b6052b7-5857-459f-9e97-0a5764bba6b9","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664855,"pid":37884,"hostname":"yuhang","reqId":"req-3","res":{"statusCode":200},"responseTime":0.14629999999999654,"msg":"request completed"}
+# {"level":30,"time":1792654664855,"pid":37884,"hostname":"yuhang","reqId":"req-4","req":{"method":"GET","url":"/api/sessions/session_missing","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664855,"pid":37884,"hostname":"yuhang","reqId":"req-4","res":{"statusCode":404},"responseTime":0.1330000000000382,"msg":"request completed"}
+# {"level":30,"time":1792654664855,"pid":37884,"hostname":"yuhang","reqId":"req-5","req":{"method":"POST","url":"/api/sessions","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664856,"pid":37884,"hostname":"yuhang","reqId":"req-5","res":{"statusCode":200},"responseTime":0.9662000000000148,"msg":"request completed"}
+# {"level":30,"time":1792654664857,"pid":37884,"hostname":"yuhang","reqId":"req-6","req":{"method":"POST","url":"/api/sessions/session_69886a0a-2e00-4ca0-963a-2ede2f8458e6/files","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# Subtest: multipart upload returns the input filename and sandbox path
+ok 4 - multipart upload returns the input filename and sandbox path
+  ---
+  duration_ms: 4.775
+  type: 'test'
+  ...
+# {"level":30,"time":1792654664860,"pid":37884,"hostname":"yuhang","reqId":"req-6","res":{"statusCode":200},"responseTime":3.2661999999999694,"msg":"request completed"}
+# {"level":30,"time":1792654664860,"pid":37884,"hostname":"yuhang","reqId":"req-7","req":{"method":"POST","url":"/api/sessions","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664861,"pid":37884,"hostname":"yuhang","reqId":"req-7","res":{"statusCode":200},"responseTime":0.43269999999995434,"msg":"request completed"}
+# {"level":30,"time":1792654664861,"pid":37884,"hostname":"yuhang","reqId":"req-8","req":{"method":"POST","url":"/api/sessions/session_3a73131b-3297-47be-a613-478bca5b44c6/prompts","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# Subtest: empty prompt is rejected before starting a run
+ok 5 - empty prompt is rejected before starting a run
+  ---
+  duration_ms: 1.0956
+  type: 'test'
+  ...
+# {"level":30,"time":1792654664861,"pid":37884,"hostname":"yuhang","reqId":"req-8","res":{"statusCode":400},"responseTime":0.22939999999999827,"msg":"request completed"}
+# {"level":30,"time":1792654664861,"pid":37884,"hostname":"yuhang","reqId":"req-9","req":{"method":"POST","url":"/api/sessions","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664862,"pid":37884,"hostname":"yuhang","reqId":"req-9","res":{"statusCode":200},"responseTime":0.3802000000000021,"msg":"request completed"}
+# {"level":30,"time":1792654664862,"pid":37884,"hostname":"yuhang","reqId":"req-a","req":{"method":"POST","url":"/api/sessions/session_5d7a7a71-99a8-4924-9e91-4fe4a963ac9f/files","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664863,"pid":37884,"hostname":"yuhang","reqId":"req-a","res":{"statusCode":200},"responseTime":0.6063000000000329,"msg":"request completed"}
+# {"level":30,"time":1792654664863,"pid":37884,"hostname":"yuhang","reqId":"req-b","req":{"method":"POST","url":"/api/sessions/session_5d7a7a71-99a8-4924-9e91-4fe4a963ac9f/prompts","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664863,"pid":37884,"hostname":"yuhang","reqId":"req-b","res":{"statusCode":202},"responseTime":0.5797000000000025,"msg":"request completed"}
+# {"level":30,"time":1792654664864,"pid":37884,"hostname":"yuhang","reqId":"req-c","req":{"method":"GET","url":"/api/sessions/session_5d7a7a71-99a8-4924-9e91-4fe4a963ac9f","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664864,"pid":37884,"hostname":"yuhang","reqId":"req-c","res":{"statusCode":200},"responseTime":0.09559999999999036,"msg":"request completed"}
+# {"level":30,"time":1792654664879,"pid":37884,"hostname":"yuhang","reqId":"req-d","req":{"method":"GET","url":"/api/sessions/session_5d7a7a71-99a8-4924-9e91-4fe4a963ac9f","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# Subtest: prompt runs through the API and returns a validated artifact
+ok 6 - prompt runs through the API and returns a validated artifact
+  ---
+  duration_ms: 17.9843
+  type: 'test'
+  ...
+# {"level":30,"time":1792654664879,"pid":37884,"hostname":"yuhang","reqId":"req-d","res":{"statusCode":200},"responseTime":0.14789999999993597,"msg":"request completed"}
+# {"level":30,"time":1792654664879,"pid":37884,"hostname":"yuhang","reqId":"req-e","req":{"method":"POST","url":"/api/sessions","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664880,"pid":37884,"hostname":"yuhang","reqId":"req-e","res":{"statusCode":200},"responseTime":0.40770000000009077,"msg":"request completed"}
+# {"level":30,"time":1792654664880,"pid":37884,"hostname":"yuhang","reqId":"req-f","req":{"method":"POST","url":"/api/sessions/session_ec680ef6-062b-42c8-9d94-fecf1b451756/files","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664880,"pid":37884,"hostname":"yuhang","reqId":"req-f","res":{"statusCode":200},"responseTime":0.4904000000000224,"msg":"request completed"}
+# {"level":30,"time":1792654664880,"pid":37884,"hostname":"yuhang","reqId":"req-g","req":{"method":"POST","url":"/api/sessions/session_ec680ef6-062b-42c8-9d94-fecf1b451756/prompts","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664881,"pid":37884,"hostname":"yuhang","reqId":"req-g","res":{"statusCode":202},"responseTime":0.23069999999995616,"msg":"request completed"}
+# {"level":30,"time":1792654664881,"pid":37884,"hostname":"yuhang","reqId":"req-h","req":{"method":"GET","url":"/api/sessions/session_ec680ef6-062b-42c8-9d94-fecf1b451756","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664881,"pid":37884,"hostname":"yuhang","reqId":"req-h","res":{"statusCode":200},"responseTime":0.06719999999995707,"msg":"request completed"}
+# {"level":30,"time":1792654664893,"pid":37884,"hostname":"yuhang","reqId":"req-i","req":{"method":"GET","url":"/api/sessions/session_ec680ef6-062b-42c8-9d94-fecf1b451756","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# Subtest: API event log contains source and executor evidence
+ok 7 - API event log contains source and executor evidence
+  ---
+  duration_ms: 13.7918
+  type: 'test'
+  ...
+# {"level":30,"time":1792654664893,"pid":37884,"hostname":"yuhang","reqId":"req-i","res":{"statusCode":200},"responseTime":0.13660000000004402,"msg":"request completed"}
+# {"level":30,"time":1792654664893,"pid":37884,"hostname":"yuhang","reqId":"req-j","req":{"method":"POST","url":"/api/sessions","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664894,"pid":37884,"hostname":"yuhang","reqId":"req-j","res":{"statusCode":200},"responseTime":0.3068000000000666,"msg":"request completed"}
+# {"level":30,"time":1792654664894,"pid":37884,"hostname":"yuhang","reqId":"req-k","req":{"method":"POST","url":"/api/sessions/session_a05e088e-2355-4665-8802-43083fd2a7f2/prompts","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# Subtest: running session rejects a second prompt
+ok 8 - running session rejects a second prompt
+  ---
+  duration_ms: 0.7938
+  type: 'test'
+  ...
+# {"level":30,"time":1792654664894,"pid":37884,"hostname":"yuhang","reqId":"req-k","res":{"statusCode":409},"responseTime":0.16150000000004638,"msg":"request completed"}
+# {"level":30,"time":1792654664894,"pid":37884,"hostname":"yuhang","reqId":"req-l","req":{"method":"POST","url":"/api/sessions","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664894,"pid":37884,"hostname":"yuhang","reqId":"req-l","res":{"statusCode":200},"responseTime":0.2685000000000173,"msg":"request completed"}
+# {"level":30,"time":1792654664894,"pid":37884,"hostname":"yuhang","reqId":"req-m","req":{"method":"POST","url":"/api/sessions/session_9c2503d2-c0dc-401f-bed4-e211bed36db0/files","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664895,"pid":37884,"hostname":"yuhang","reqId":"req-m","res":{"statusCode":200},"responseTime":0.39459999999996853,"msg":"request completed"}
+# {"level":30,"time":1792654664895,"pid":37884,"hostname":"yuhang","reqId":"req-n","req":{"method":"POST","url":"/api/sessions/session_9c2503d2-c0dc-401f-bed4-e211bed36db0/prompts","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664895,"pid":37884,"hostname":"yuhang","reqId":"req-n","res":{"statusCode":202},"responseTime":0.14030000000002474,"msg":"request completed"}
+# {"level":30,"time":1792654664895,"pid":37884,"hostname":"yuhang","reqId":"req-o","req":{"method":"GET","url":"/api/sessions/session_9c2503d2-c0dc-401f-bed4-e211bed36db0","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664895,"pid":37884,"hostname":"yuhang","reqId":"req-o","res":{"statusCode":200},"responseTime":0.06420000000002801,"msg":"request completed"}
+# {"level":30,"time":1792654664907,"pid":37884,"hostname":"yuhang","reqId":"req-p","req":{"method":"GET","url":"/api/sessions/session_9c2503d2-c0dc-401f-bed4-e211bed36db0","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# Subtest: artifact download requires the owning session
+ok 9 - artifact download requires the owning session
+  ---
+  duration_ms: 13.4858
+  type: 'test'
+  ...
+# {"level":30,"time":1792654664907,"pid":37884,"hostname":"yuhang","reqId":"req-p","res":{"statusCode":200},"responseTime":0.1027000000000271,"msg":"request completed"}
+# {"level":30,"time":1792654664907,"pid":37884,"hostname":"yuhang","reqId":"req-q","req":{"method":"GET","url":"/api/artifacts/artifact_b0e58121-dc8e-4b5d-a056-fac2e9f0eca5?sessionId=session_other","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664907,"pid":37884,"hostname":"yuhang","reqId":"req-q","res":{"statusCode":403},"responseTime":0.1107000000000653,"msg":"request completed"}
+# {"level":30,"time":1792654664907,"pid":37884,"hostname":"yuhang","reqId":"req-r","req":{"method":"GET","url":"/api/artifacts/artifact_b0e58121-dc8e-4b5d-a056-fac2e9f0eca5?sessionId=session_9c2503d2-c0dc-401f-bed4-e211bed36db0","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664907,"pid":37884,"hostname":"yuhang","reqId":"req-r","res":{"statusCode":200},"responseTime":0.106899999999996,"msg":"request completed"}
+# {"level":30,"time":1792654664908,"pid":37884,"hostname":"yuhang","reqId":"req-s","req":{"method":"POST","url":"/api/sessions","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664908,"pid":37884,"hostname":"yuhang","reqId":"req-s","res":{"statusCode":200},"responseTime":0.3404000000000451,"msg":"request completed"}
+# {"level":30,"time":1792654664908,"pid":37884,"hostname":"yuhang","reqId":"req-t","req":{"method":"POST","url":"/api/sessions","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664908,"pid":37884,"hostname":"yuhang","reqId":"req-t","res":{"statusCode":200},"responseTime":0.13530000000002929,"msg":"request completed"}
+# {"level":30,"time":1792654664908,"pid":37884,"hostname":"yuhang","reqId":"req-u","req":{"method":"POST","url":"/api/sessions/session_791fb96d-b2ac-4994-a223-4b06a12e2976/files","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664909,"pid":37884,"hostname":"yuhang","reqId":"req-u","res":{"statusCode":200},"responseTime":0.389699999999948,"msg":"request completed"}
+# {"level":30,"time":1792654664909,"pid":37884,"hostname":"yuhang","reqId":"req-v","req":{"method":"POST","url":"/api/sessions/session_e32197c9-b6b9-434b-8f5c-48ef0cd92d67/files","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664909,"pid":37884,"hostname":"yuhang","reqId":"req-v","res":{"statusCode":200},"responseTime":0.34629999999992833,"msg":"request completed"}
+# {"level":30,"time":1792654664909,"pid":37884,"hostname":"yuhang","reqId":"req-w","req":{"method":"POST","url":"/api/sessions/session_791fb96d-b2ac-4994-a223-4b06a12e2976/prompts","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664909,"pid":37884,"hostname":"yuhang","reqId":"req-w","res":{"statusCode":202},"responseTime":0.1332999999999629,"msg":"request completed"}
+# {"level":30,"time":1792654664909,"pid":37884,"hostname":"yuhang","reqId":"req-x","req":{"method":"POST","url":"/api/sessions/session_e32197c9-b6b9-434b-8f5c-48ef0cd92d67/prompts","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# Subtest: two sessions keep same-name uploaded files isolated
+ok 10 - two sessions keep same-name uploaded files isolated
+  ---
+  duration_ms: 2.8161
+  type: 'test'
+  ...
+# {"level":30,"time":1792654664910,"pid":37884,"hostname":"yuhang","reqId":"req-x","res":{"statusCode":202},"responseTime":0.18640000000004875,"msg":"request completed"}
+# {"level":30,"time":1792654664910,"pid":37884,"hostname":"yuhang","reqId":"req-y","req":{"method":"GET","url":"/api/sessions/session_791fb96d-b2ac-4994-a223-4b06a12e2976","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664910,"pid":37884,"hostname":"yuhang","reqId":"req-y","res":{"statusCode":200},"responseTime":0.070699999999988,"msg":"request completed"}
+# {"level":30,"time":1792654664910,"pid":37884,"hostname":"yuhang","reqId":"req-z","req":{"method":"GET","url":"/api/sessions/session_e32197c9-b6b9-434b-8f5c-48ef0cd92d67","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664910,"pid":37884,"hostname":"yuhang","reqId":"req-z","res":{"statusCode":200},"responseTime":0.06550000000004275,"msg":"request completed"}
+# {"level":30,"time":1792654664910,"pid":37884,"hostname":"yuhang","reqId":"req-10","req":{"method":"GET","url":"/api/artifacts/artifact_3a764c0c-fe00-4273-8bb9-09a103793474?sessionId=session_791fb96d-b2ac-4994-a223-4b06a12e2976","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664910,"pid":37884,"hostname":"yuhang","reqId":"req-10","res":{"statusCode":200},"responseTime":0.0808999999999287,"msg":"request completed"}
+# {"level":30,"time":1792654664910,"pid":37884,"hostname":"yuhang","reqId":"req-11","req":{"method":"GET","url":"/api/artifacts/artifact_07bb90a4-f9cc-4fc7-8151-b8a49409d7f5?sessionId=session_e32197c9-b6b9-434b-8f5c-48ef0cd92d67","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664910,"pid":37884,"hostname":"yuhang","reqId":"req-11","res":{"statusCode":200},"responseTime":0.06560000000001764,"msg":"request completed"}
+# {"level":30,"time":1792654664910,"pid":37884,"hostname":"yuhang","reqId":"req-12","req":{"method":"POST","url":"/api/sessions","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# {"level":30,"time":1792654664911,"pid":37884,"hostname":"yuhang","reqId":"req-12","res":{"statusCode":200},"responseTime":0.30140000000005784,"msg":"request completed"}
+# {"level":30,"time":1792654664917,"pid":37884,"hostname":"yuhang","reqId":"req-13","req":{"method":"POST","url":"/api/sessions/session_1ac0f142-8143-4503-a5d1-f999db8e906e/files","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+# Subtest: multipart upload rejects a file larger than 10 MiB
+ok 11 - multipart upload rejects a file larger than 10 MiB
+  ---
+  duration_ms: 9.2912
+  type: 'test'
+  ...
+# {"level":30,"time":1792654664918,"pid":37884,"hostname":"yuhang","reqId":"req-13","res":{"statusCode":413},"err":{"code":"FST_REQ_FILE_TOO_LARGE","message":"request file too large","name":"FastifyError","part":{"_buf":null,"encoding":"7bit","fieldname":"file","fields":{"file":"[Circular]"},"file":{"_events":{"close":[null,null],"end":[null,null],"error":[null,null]},"_eventsCount":6,"_readableState":{"awaitDrainWriters":null,"buffer":[],"bufferIndex":0,"highWaterMark":16384,"length":0,"pipes":[]},"bytesRead":10485760,"truncated":true},"filename":"large.txt","mimetype":"text/plain","type":"file"},"stack":"FastifyError: request file too large\\n    at Object.toBuffer (C:\\\\Users\\\\13207\\\\Desktop\\\\简历\\\\项目源码\\\\node_modules\\\\.pnpm\\\\@fastify+multipart@10.1.4\\\\node_modules\\\\@fastify\\\\multipart\\\\index.js:420:21)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\\n    at async Object.<anonymous> (C:\\\\Users\\\\13207\\\\Desktop\\\\简历\\\\项目源码\\\\src\\\\server.ts:70:18)","statusCode":413,"type":"FastifyError"},"msg":"request file too large"}
+# {"level":30,"time":1792654664919,"pid":37884,"hostname":"yuhang","reqId":"req-13","res":{"statusCode":413},"responseTime":2.824799999999982,"msg":"request completed"}
+# Subtest: nonzero tool exit fails the run without publishing success
+ok 12 - nonzero tool exit fails the run without publishing success
+  ---
+  duration_ms: 1.8222
+  type: 'test'
+  ...
+# Subtest: tool timeout exception fails the run without publishing success
+ok 13 - tool timeout exception fails the run without publishing success
+  ---
+  duration_ms: 0.2208
+  type: 'test'
+  ...
+# Subtest: missing tool output prevents artifact publication
+ok 14 - missing tool output prevents artifact publication
+  ---
+  duration_ms: 0.405
+  type: 'test'
+  ...
+# Subtest: malicious input text is rejected as data and cannot create an artifact
+ok 15 - malicious input text is rejected as data and cannot create an artifact
+  ---
+  duration_ms: 0.6517
+  type: 'test'
+  ...
+# Subtest: failed parsing can recover after replacing the input file
+ok 16 - failed parsing can recover after replacing the input file
+  ---
+  duration_ms: 0.4876
+  type: 'test'
+  ...
+# Subtest: artifact registration rejects a missing file
+ok 17 - artifact registration rejects a missing file
+  ---
+  duration_ms: 0.286
+  type: 'test'
+  ...
+# Subtest: workspace paths containing backslashes are rejected
+ok 18 - workspace paths containing backslashes are rejected
+  ---
+  duration_ms: 0.1003
+  type: 'test'
+  ...
+# Subtest: an empty file fails with a clear error and no artifact
+ok 19 - an empty file fails with a clear error and no artifact
+  ---
+  duration_ms: 0.1675
+  type: 'test'
+  ...
+# Subtest: parseNumbers accepts whitespace and comma separators
+ok 20 - parseNumbers accepts whitespace and comma separators
+  ---
+  duration_ms: 0.8858
+  type: 'test'
+  ...
+# Subtest: parseNumbers rejects invalid tokens
+ok 21 - parseNumbers rejects invalid tokens
+  ---
+  duration_ms: 0.2574
+  type: 'test'
+  ...
+# Subtest: sort workflow creates and validates artifact
+ok 22 - sort workflow creates and validates artifact
+  ---
+  duration_ms: 1.7868
+  type: 'test'
+  ...
+# Subtest: follow-up workflow filters multiples of seven
+ok 23 - follow-up workflow filters multiples of seven
+  ---
+  duration_ms: 0.4146
+  type: 'test'
+  ...
+# Subtest: sorted validator catches changed multiset
+ok 24 - sorted validator catches changed multiset
+  ---
+  duration_ms: 0.1761
+  type: 'test'
+  ...
+# Subtest: multiples validator rejects non-multiples
+ok 25 - multiples validator rejects non-multiples
+  ---
+  duration_ms: 0.1476
+  type: 'test'
+  ...
+# Subtest: parseNumbers accepts signed integers and zero
+ok 26 - parseNumbers accepts signed integers and zero
+  ---
+  duration_ms: 1.061
+  type: 'test'
+  ...
+# Subtest: parseNumbers rejects empty input
+ok 27 - parseNumbers rejects empty input
+  ---
+  duration_ms: 0.2602
+  type: 'test'
+  ...
+# Subtest: parseNumbers rejects unsafe integers
+ok 28 - parseNumbers rejects unsafe integers
+  ---
+  duration_ms: 0.1031
+  type: 'test'
+  ...
+# Subtest: Memory Sandbox rejects host paths
+ok 29 - Memory Sandbox rejects host paths
+  ---
+  duration_ms: 0.2036
+  type: 'test'
+  ...
+# Subtest: Memory Sandbox rejects traversal paths
+ok 30 - Memory Sandbox rejects traversal paths
+  ---
+  duration_ms: 0.135
+  type: 'test'
+  ...
+# Subtest: Memory Sandbox copies uploaded bytes
+ok 31 - Memory Sandbox copies uploaded bytes
+  ---
+  duration_ms: 0.1047
+  type: 'test'
+  ...
+# Subtest: sorted validator accepts duplicate values and reports summary
+ok 32 - sorted validator accepts duplicate values and reports summary
+  ---
+  duration_ms: 0.3201
+  type: 'test'
+  ...
+# Subtest: sorted validator rejects output that is not ascending
+ok 33 - sorted validator rejects output that is not ascending
+  ---
+  duration_ms: 0.1672
+  type: 'test'
+  ...
+# Subtest: sorted validator fails when output cannot be read
+ok 34 - sorted validator fails when output cannot be read
+  ---
+  duration_ms: 0.1529
+  type: 'test'
+  ...
+# Subtest: multiples validator accepts expected descending output
+ok 35 - multiples validator accepts expected descending output
+  ---
+  duration_ms: 0.2941
+  type: 'test'
+  ...
+# Subtest: multiples validator rejects ascending or incomplete output
+ok 36 - multiples validator rejects ascending or incomplete output
+  ---
+  duration_ms: 0.1563
+  type: 'test'
+  ...
+# Subtest: ArtifactStore records content hash and metadata
+ok 37 - ArtifactStore records content hash and metadata
+  ---
+  duration_ms: 0.9416
+  type: 'test'
+  ...
+# Subtest: ArtifactStore preserves session ownership in metadata
+ok 38 - ArtifactStore preserves session ownership in metadata
+  ---
+  duration_ms: 0.169
+  type: 'test'
+  ...
+# Subtest: orchestrator reports missing input as a failed run
+ok 39 - orchestrator reports missing input as a failed run
+  ---
+  duration_ms: 0.2657
+  type: 'test'
+  ...
+# Subtest: orchestrator reports malformed input without creating an artifact
+ok 40 - orchestrator reports malformed input without creating an artifact
+  ---
+  duration_ms: 0.398
+  type: 'test'
+  ...
+# Subtest: orchestrator emits the expected evidence order
+ok 41 - orchestrator emits the expected evidence order
+  ---
+  duration_ms: 0.2489
+  type: 'test'
+  ...
+# Subtest: orchestrator assistant result names the sandbox output path
+ok 42 - orchestrator assistant result names the sandbox output path
+  ---
+  duration_ms: 0.217
+  type: 'test'
+  ...
+# Subtest: follow-up run reuses the same input path and creates a second artifact
+ok 43 - follow-up run reuses the same input path and creates a second artifact
+  ---
+  duration_ms: 0.4807
+  type: 'test'
+  ...
+# Subtest: follow-up output is independent from the earlier sorted artifact
+ok 44 - follow-up output is independent from the earlier sorted artifact
+  ---
+  duration_ms: 0.2732
+  type: 'test'
+  ...
+# Subtest: invalid prompt classification still uses the deterministic sort path
+ok 45 - invalid prompt classification still uses the deterministic sort path
+  ---
+  duration_ms: 0.1602
+  type: 'test'
+  ...
+# Subtest: failed orchestrator run leaves no generated file
+ok 46 - failed orchestrator run leaves no generated file
+  ---
+  duration_ms: 0.149
+  type: 'test'
+  ...
+# Subtest: successful run settles to idle
+ok 47 - successful run settles to idle
+  ---
+  duration_ms: 0.2027
+  type: 'test'
+  ...
+1..47
+# tests 47
+# suites 0
+# pass 47
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 595.2845

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://pi.dev/schemas/models.schema.json",
+  "providers": {
+    "dashscope": {
+      "baseUrl": "https://llm-cgbmrhxyjruav6sm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+      "api": "openai-completions",
+      "apiKey": "$DASHSCOPE_API_KEY",
+      "models": [
+        {
+          "id": "qwen-plus",
+          "name": "Qwen Plus"
+        }
+      ]
+    }
+  }
+}

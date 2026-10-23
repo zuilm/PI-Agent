@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "settings": {
+    "searchBackend": "core",
+    "reranker": "none",
+    "localLlm": "off",
+    "searchPrewarmBrowser": false,
+    "fetchTimeoutMs": 10000,
+    "fetchMaxRetries": 1,
+    "searchTotalTimeoutMs": 30000,
+    "browserHeadful": false,
+    "logLevel": "warn"
+  }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Spawn Pi · Agent Workspace</title>
+  <link rel="stylesheet" href="/assets/app.css" />
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="会话导航">
+      <div class="brand-row"><a class="brand" href="/" aria-label="Spawn Pi 首页"><span class="brand-symbol">✳</span><strong>Spawn Pi</strong><span class="beta">beta</span></a><button id="collapse-nav" class="icon-button" title="收起侧栏" aria-label="收起侧栏" data-icon="chevron-left"></button></div>
+      <button id="new-chat" class="new-chat"><span data-icon="plus"></span><span class="nav-label">新建对话</span></button>
+      <div class="history-heading nav-label">会话记录 <span>本次打开</span></div>
+      <nav id="history" aria-label="本次打开的会话"></nav>
+      <div class="sidebar-footer"><span class="workspace-avatar" data-icon="terminal"></span><div class="nav-label"><strong>Agent Workspace</strong><span>Powered by Pi</span></div><span class="workspace-dot"></span></div>
+    </aside>
+    <main>
+      <section class="conversation" aria-label="对话">
+        <header class="conversation-header"><button id="toggle-nav" class="icon-button" title="展开会话导航" aria-label="展开会话导航" data-icon="panel-left"></button><h1 id="chat-title">新对话</h1><div class="header-actions"><button id="rename-chat" class="icon-button" title="重命名对话" aria-label="重命名对话" data-icon="edit"></button><button id="copy-chat" class="icon-button" title="复制对话" aria-label="复制对话" data-icon="copy"></button><button id="toggle-tools" class="icon-button" title="查看执行面板" aria-label="查看执行面板" data-icon="panel-right"></button></div></header>
+        <div id="chat" tabindex="0" aria-label="对话内容">
+          <div id="welcome" class="welcome"><div class="welcome-mark">✳</div><div class="eyebrow">YOUR THINKING, IN MOTION</div><h2>从一个想法，<br />到一个结果。</h2><p>交给 Pi 去思考、编写和执行。<br />每一步操作，都在这里清晰呈现。</p><div class="suggestions"><button data-prompt="请分析我上传的数据文件，说明数据结构、质量和主要发现。"><span data-icon="chart"></span><span>分析一份数据<small>上传文件，让发现有据可依</small></span><span data-icon="arrow-up-right"></span></button><button data-prompt="请用 Python 编写一个合并 CSV 文件的脚本，并创建样例数据验证结果。"><span data-icon="code"></span><span>编写并验证代码<small>从需求到可下载的成果</small></span><span data-icon="arrow-up-right"></span></button><button data-prompt="请搜索 Fastify 官方文档，介绍如何创建一个简单服务，并附上来源链接。"><span data-icon="globe"></span><span>搜索官方资料<small>获取网页内容，保留原始来源</small></span><span data-icon="arrow-up-right"></span></button></div></div>
+          <div id="messages" aria-live="polite" aria-relevant="additions text"></div>
+        </div>
+        <div class="composer-area">
+          <details id="run-summary" class="run-summary" hidden><summary><span class="summary-dot"></span><span><strong id="summary-title"></strong><small id="summary-caption"></small></span><span class="summary-chevron" data-icon="chevron-up"></span></summary><div id="summary-list"></div></details>
+          <div class="composer"><div id="attachment-chips" class="attachment-chips"></div><label class="sr-only" for="prompt">任务描述</label><textarea id="prompt" rows="2" placeholder="描述你的任务，或添加一份文件…"></textarea><div class="composer-toolbar"><div class="composer-left"><button id="choose-file" class="icon-button attach-button" title="添加文件（选择后自动上传）" aria-label="添加文件（选择后自动上传）" data-icon="paperclip"></button><input id="file" type="file" hidden /><span class="keyboard-hint">Enter 发送 · Shift+Enter 换行</span></div><button id="upload" class="retry-upload" hidden>重试上传</button><button id="abort" class="stop-button" title="停止任务" hidden disabled><span data-icon="stop"></span>停止</button><button id="send" class="send-button" title="发送任务" aria-label="发送任务" data-icon="send"></button></div></div>
+          <div class="composer-caption"><span id="file-status">文件选择后自动上传 · 单个文件最大 10 MB</span><span class="engine-label"><span class="tiny-dot"></span>Pi Agent</span></div>
+        </div>
+      </section>
+      <section id="inspector" class="inspector" aria-label="Agent 执行面板">
+        <header class="inspector-header"><span class="inspector-title"><span class="live-dot"></span>Agent Workspace</span><div class="inspector-tabs" role="tablist" aria-label="执行面板"><button id="tab-progress" class="tab active" role="tab" aria-selected="true" aria-controls="progress-panel" data-tab="progress">进度 <span id="tool-count"></span></button><button id="tab-audit" class="tab" role="tab" aria-selected="false" aria-controls="audit-panel" data-tab="audit" tabindex="-1">日志</button><button id="tab-files" class="tab" role="tab" aria-selected="false" aria-controls="files-panel" data-tab="files" tabindex="-1">文件 <span id="file-count"></span></button></div><button id="close-tools" class="icon-button" title="关闭执行面板" aria-label="关闭执行面板" data-icon="close"></button></header>
+        <div class="session-strip"><span id="status-indicator" class="tiny-dot"></span><span id="status" role="status">等待开始</span><span id="session-short" title="发送任务后创建沙箱会话">尚未创建会话</span></div>
+        <div id="progress-panel" class="inspector-panel" role="tabpanel" aria-labelledby="tab-progress"><div id="tool-empty" class="empty-panel"><div class="empty-icon" data-icon="terminal"></div><h2>每一步，都有迹可循</h2><p>任务开始后，在这里查看<br />工具调用、执行命令和真实输出。</p><span class="empty-caption">READY WHEN YOU ARE</span></div><div id="tools"></div></div>
+        <div id="audit-panel" class="inspector-panel" role="tabpanel" aria-labelledby="tab-audit" hidden><div id="audit"></div></div>
+        <div id="files-panel" class="inspector-panel" role="tabpanel" aria-labelledby="tab-files" hidden><div id="files"></div></div>
+        <footer class="tool-navigation"><button id="previous-tool" class="icon-button" title="上一个工具调用" aria-label="上一个工具调用" data-icon="chevron-left" disabled></button><label class="sr-only" for="tool-position">工具调用位置</label><input id="tool-position" type="range" min="0" max="0" value="0" disabled /><button id="next-tool" class="icon-button" title="下一个工具调用" aria-label="下一个工具调用" data-icon="chevron-right" disabled></button><span id="tool-page">0 / 0</span></footer>
+      </section>
+    </main>
+  </div>
+  <button id="overlay" class="overlay" aria-label="关闭面板" hidden></button><div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

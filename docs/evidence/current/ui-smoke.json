@@ -1,0 +1,17 @@
+{
+  "executedAt": "2026-10-22T10:49:28.147Z",
+  "mode": "real Edge browser + real model/Pi/E2B",
+  "passed": true,
+  "checks": [
+    "task without attachment",
+    "automatic upload",
+    "streaming Pi answer",
+    "native tool events",
+    "sandbox output path",
+    "exact 10000-number download",
+    "actual browser download",
+    "text preview",
+    "zero JavaScript runtime exceptions"
+  ],
+  "screenshot": "webui.png"
+}

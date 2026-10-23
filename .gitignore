@@ -1,0 +1,11 @@
+node_modules/
+.env
+*.log
+.pi/sessions/
+.pi/agent/auth.json
+.pi/agent/models-store.json
+.pi/runtime/
+.pi/qa-browser/
+.pi/web/data/
+.pi/web/research/
+.pi/web/plugins/

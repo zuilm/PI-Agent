@@ -1,0 +1,112 @@
+{
+  "executedAt": "2026-10-22T07:38:08.869Z",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "architecture": "x64"
+  },
+  "runs": [
+    {
+      "name": "typecheck",
+      "mode": "static",
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "startedAt": "2026-10-22T07:37:44.087Z",
+      "completedAt": "2026-10-22T07:37:44.300Z",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "automated-tests",
+      "mode": "memory-mock",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-reporter=tap",
+        "tests/api.test.ts",
+        "tests/audit.test.ts",
+        "tests/core.test.ts",
+        "tests/phase2.test.ts"
+      ],
+      "startedAt": "2026-10-22T07:37:44.300Z",
+      "completedAt": "2026-10-22T07:37:44.942Z",
+      "exitCode": 0,
+      "signal": null,
+      "totals": {
+        "tests": 47,
+        "pass": 47,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "name": "response-quality",
+      "mode": "memory-mock/script-response",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/quality-eval.ts"
+      ],
+      "startedAt": "2026-10-22T07:37:44.942Z",
+      "completedAt": "2026-10-22T07:37:45.223Z",
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "name": "pi-rpc-smoke",
+      "mode": "real-pi/no-model-call",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/pi-rpc-smoke.ts"
+      ],
+      "startedAt": "2026-10-22T07:37:45.223Z",
+      "completedAt": "2026-10-22T07:37:45.659Z",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "e2b-smoke",
+      "mode": "real-e2b",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/e2b-smoke.ts"
+      ],
+      "startedAt": "2026-10-22T07:37:45.660Z",
+      "completedAt": "2026-10-22T07:37:53.831Z",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "example2-e2e",
+      "mode": "real-e2b/no-http-ui-model",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/example2-e2e.ts"
+      ],
+      "startedAt": "2026-10-22T07:37:53.832Z",
+      "completedAt": "2026-10-22T07:38:08.868Z",
+      "exitCode": 0,
+      "signal": null
+    }
+  ],
+  "responseQuality": {
+    "total": 5,
+    "passed": 3,
+    "failed": 2
+  },
+  "modelEvaluation": "BLOCKED"
+}

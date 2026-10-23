@@ -1,0 +1,7 @@
+allowBuilds:
+  '@google/genai': false
+  better-sqlite3: false
+  esbuild: true
+  onnxruntime-node: false
+  protobufjs: false
+  sharp: false

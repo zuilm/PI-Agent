@@ -1,0 +1,423 @@
+{
+  "executedAt": "2026-10-22T07:38:07.666Z",
+  "mode": "real-e2b",
+  "scope": "Orchestrator + E2B + validators + ArtifactStore; excludes HTTP/UI and model decisions",
+  "ok": true,
+  "inputBytes": 48894,
+  "generatedFiles": [
+    "/workspace/output/sorted_numbers_asc.txt",
+    "/workspace/output/multiples_of_7_desc.txt"
+  ],
+  "artifacts": [
+    {
+      "artifactId": "artifact_f5e1cf4c-d6a8-48e8-9e96-0448ab636df9",
+      "filename": "sorted_numbers_asc.txt",
+      "path": "/workspace/output/sorted_numbers_asc.txt",
+      "size": 48894,
+      "sha256": "8060aa0ac20a3e5db2b67325c98a0122f2d09a612574458225dcb9a086f87cc3"
+    },
+    {
+      "artifactId": "artifact_bac36a57-c15c-4faf-b45e-c21babf1bd9f",
+      "filename": "multiples_of_7_desc.txt",
+      "path": "/workspace/output/multiples_of_7_desc.txt",
+      "size": 6983,
+      "sha256": "817bff831e6022a348d83b5e6f1bf1061ec5825c7575c2d84425267f48c79fdc"
+    }
+  ],
+  "validations": [
+    {
+      "kind": "number-sort",
+      "ok": true,
+      "checks": [
+        {
+          "name": "input_readable",
+          "ok": true,
+          "details": "count=10000"
+        },
+        {
+          "name": "output_readable",
+          "ok": true,
+          "details": "count=10000"
+        },
+        {
+          "name": "ascending",
+          "ok": true
+        },
+        {
+          "name": "count_preserved",
+          "ok": true,
+          "details": "10000 -> 10000"
+        },
+        {
+          "name": "multiset_preserved",
+          "ok": true
+        }
+      ],
+      "summary": {
+        "count": 10000,
+        "min": 1,
+        "max": 10000,
+        "first10": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "last10": [
+          9991,
+          9992,
+          9993,
+          9994,
+          9995,
+          9996,
+          9997,
+          9998,
+          9999,
+          10000
+        ],
+        "inputSha256": "4c573294bc9c0c78eb46c8953a213e277348bc76421dc2a23d7361e5ee7df178",
+        "outputSha256": "8060aa0ac20a3e5db2b67325c98a0122f2d09a612574458225dcb9a086f87cc3"
+      }
+    },
+    {
+      "kind": "multiples-of-7",
+      "ok": true,
+      "checks": [
+        {
+          "name": "all_divisible_by_7",
+          "ok": true
+        },
+        {
+          "name": "descending",
+          "ok": true
+        },
+        {
+          "name": "matches_expected_filter",
+          "ok": true
+        }
+      ],
+      "summary": {
+        "count": 1428,
+        "first10": [
+          9996,
+          9989,
+          9982,
+          9975,
+          9968,
+          9961,
+          9954,
+          9947,
+          9940,
+          9933
+        ],
+        "last10": [
+          70,
+          63,
+          56,
+          49,
+          42,
+          35,
+          28,
+          21,
+          14,
+          7
+        ]
+      }
+    }
+  ],
+  "eventTypes": [
+    "run_started",
+    "plan",
+    "tool_started",
+    "tool_finished",
+    "validation_finished",
+    "artifact_ready",
+    "assistant_delta",
+    "run_settled",
+    "run_started",
+    "plan",
+    "tool_started",
+    "tool_finished",
+    "validation_finished",
+    "artifact_ready",
+    "assistant_delta",
+    "run_settled"
+  ],
+  "sources": [
+    "orchestrator",
+    "script",
+    "sandbox",
+    "validator"
+  ],
+  "events": [
+    {
+      "type": "run_started",
+      "source": "orchestrator",
+      "runId": "run_d7936735-10a4-4312-af2c-30012056400e",
+      "sessionId": "example2_e2e",
+      "at": "2026-10-22T07:37:59.646Z"
+    },
+    {
+      "type": "plan",
+      "source": "script",
+      "runId": "run_d7936735-10a4-4312-af2c-30012056400e",
+      "text": "读取输入文件，使用确定性沙箱脚本排序，并校验数量、顺序和多重集合。当前排序结果由脚本编排生成，Pi 模型未直接生成结果。",
+      "at": "2026-10-22T07:37:59.646Z"
+    },
+    {
+      "type": "tool_started",
+      "source": "sandbox",
+      "executor": "E2B Sandbox",
+      "runId": "run_d7936735-10a4-4312-af2c-30012056400e",
+      "toolCallId": "tool_08ab100e-c566-4213-8a19-cd823813ff90",
+      "name": "sandbox_exec",
+      "args": {
+        "purpose": "sort_numbers",
+        "inputPath": "/workspace/input/shuffled_numbers_10000.txt",
+        "outputPath": "/workspace/output/sorted_numbers_asc.txt"
+      },
+      "at": "2026-10-22T07:37:59.646Z"
+    },
+    {
+      "type": "tool_finished",
+      "source": "sandbox",
+      "executor": "E2B Sandbox",
+      "runId": "run_d7936735-10a4-4312-af2c-30012056400e",
+      "toolCallId": "tool_08ab100e-c566-4213-8a19-cd823813ff90",
+      "name": "sandbox_exec",
+      "status": "ok",
+      "result": {
+        "exitCode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "at": "2026-10-22T07:38:00.189Z"
+    },
+    {
+      "type": "validation_finished",
+      "source": "validator",
+      "runId": "run_d7936735-10a4-4312-af2c-30012056400e",
+      "report": {
+        "kind": "number-sort",
+        "ok": true,
+        "checks": [
+          {
+            "name": "input_readable",
+            "ok": true,
+            "details": "count=10000"
+          },
+          {
+            "name": "output_readable",
+            "ok": true,
+            "details": "count=10000"
+          },
+          {
+            "name": "ascending",
+            "ok": true
+          },
+          {
+            "name": "count_preserved",
+            "ok": true,
+            "details": "10000 -> 10000"
+          },
+          {
+            "name": "multiset_preserved",
+            "ok": true
+          }
+        ],
+        "summary": {
+          "count": 10000,
+          "min": 1,
+          "max": 10000,
+          "first10": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "last10": [
+            9991,
+            9992,
+            9993,
+            9994,
+            9995,
+            9996,
+            9997,
+            9998,
+            9999,
+            10000
+          ],
+          "inputSha256": "4c573294bc9c0c78eb46c8953a213e277348bc76421dc2a23d7361e5ee7df178",
+          "outputSha256": "8060aa0ac20a3e5db2b67325c98a0122f2d09a612574458225dcb9a086f87cc3"
+        }
+      },
+      "at": "2026-10-22T07:38:03.730Z"
+    },
+    {
+      "type": "artifact_ready",
+      "source": "sandbox",
+      "runId": "run_d7936735-10a4-4312-af2c-30012056400e",
+      "artifact": {
+        "artifactId": "artifact_f5e1cf4c-d6a8-48e8-9e96-0448ab636df9",
+        "sessionId": "example2_e2e",
+        "path": "/workspace/output/sorted_numbers_asc.txt",
+        "filename": "sorted_numbers_asc.txt",
+        "contentType": "text/plain; charset=utf-8",
+        "size": 48894,
+        "sha256": "8060aa0ac20a3e5db2b67325c98a0122f2d09a612574458225dcb9a086f87cc3",
+        "createdAt": "2026-10-22T07:38:04.356Z"
+      },
+      "at": "2026-10-22T07:38:04.356Z"
+    },
+    {
+      "type": "assistant_delta",
+      "source": "script",
+      "runId": "run_d7936735-10a4-4312-af2c-30012056400e",
+      "delta": "已完成排序：共 10000 个整数，最小值 1，最大值 10000。输出文件已写入 /workspace/output/sorted_numbers_asc.txt，文件名为 sorted_numbers_asc.txt。结果来自确定性脚本在 E2B Sandbox 中执行，并经过结果校验；不是 Pi 模型直接输出。",
+      "at": "2026-10-22T07:38:04.356Z"
+    },
+    {
+      "type": "run_settled",
+      "source": "orchestrator",
+      "runId": "run_d7936735-10a4-4312-af2c-30012056400e",
+      "ok": true,
+      "at": "2026-10-22T07:38:04.356Z"
+    },
+    {
+      "type": "run_started",
+      "source": "orchestrator",
+      "runId": "run_dce67098-d1a6-4024-8c2f-9ae55aa22227",
+      "sessionId": "example2_e2e",
+      "at": "2026-10-22T07:38:04.356Z"
+    },
+    {
+      "type": "plan",
+      "source": "script",
+      "runId": "run_dce67098-d1a6-4024-8c2f-9ae55aa22227",
+      "text": "复用当前会话输入文件，筛选 7 的倍数并按降序输出，再进行结果校验。当前结果由确定性脚本编排生成，Pi 模型未直接生成结果。",
+      "at": "2026-10-22T07:38:04.356Z"
+    },
+    {
+      "type": "tool_started",
+      "source": "sandbox",
+      "executor": "E2B Sandbox",
+      "runId": "run_dce67098-d1a6-4024-8c2f-9ae55aa22227",
+      "toolCallId": "tool_3725a07f-083b-4baa-b733-55bad09543c1",
+      "name": "sandbox_exec",
+      "args": {
+        "purpose": "filter_multiples_of_7",
+        "inputPath": "/workspace/input/shuffled_numbers_10000.txt",
+        "outputPath": "/workspace/output/multiples_of_7_desc.txt"
+      },
+      "at": "2026-10-22T07:38:04.356Z"
+    },
+    {
+      "type": "tool_finished",
+      "source": "sandbox",
+      "executor": "E2B Sandbox",
+      "runId": "run_dce67098-d1a6-4024-8c2f-9ae55aa22227",
+      "toolCallId": "tool_3725a07f-083b-4baa-b733-55bad09543c1",
+      "name": "sandbox_exec",
+      "status": "ok",
+      "result": {
+        "exitCode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "at": "2026-10-22T07:38:05.587Z"
+    },
+    {
+      "type": "validation_finished",
+      "source": "validator",
+      "runId": "run_dce67098-d1a6-4024-8c2f-9ae55aa22227",
+      "report": {
+        "kind": "multiples-of-7",
+        "ok": true,
+        "checks": [
+          {
+            "name": "all_divisible_by_7",
+            "ok": true
+          },
+          {
+            "name": "descending",
+            "ok": true
+          },
+          {
+            "name": "matches_expected_filter",
+            "ok": true
+          }
+        ],
+        "summary": {
+          "count": 1428,
+          "first10": [
+            9996,
+            9989,
+            9982,
+            9975,
+            9968,
+            9961,
+            9954,
+            9947,
+            9940,
+            9933
+          ],
+          "last10": [
+            70,
+            63,
+            56,
+            49,
+            42,
+            35,
+            28,
+            21,
+            14,
+            7
+          ]
+        }
+      },
+      "at": "2026-10-22T07:38:06.731Z"
+    },
+    {
+      "type": "artifact_ready",
+      "source": "sandbox",
+      "runId": "run_dce67098-d1a6-4024-8c2f-9ae55aa22227",
+      "artifact": {
+        "artifactId": "artifact_bac36a57-c15c-4faf-b45e-c21babf1bd9f",
+        "sessionId": "example2_e2e",
+        "path": "/workspace/output/multiples_of_7_desc.txt",
+        "filename": "multiples_of_7_desc.txt",
+        "contentType": "text/plain; charset=utf-8",
+        "size": 6983,
+        "sha256": "817bff831e6022a348d83b5e6f1bf1061ec5825c7575c2d84425267f48c79fdc",
+        "createdAt": "2026-10-22T07:38:07.660Z"
+      },
+      "at": "2026-10-22T07:38:07.660Z"
+    },
+    {
+      "type": "assistant_delta",
+      "source": "script",
+      "runId": "run_dce67098-d1a6-4024-8c2f-9ae55aa22227",
+      "delta": "已生成 multiples_of_7_desc.txt，共 1428 个数字，结果按降序排列且全部能被 7 整除。输出文件已写入 /workspace/output/multiples_of_7_desc.txt。结果来自确定性脚本在 E2B Sandbox 中执行，并经过结果校验；不是 Pi 模型直接输出。",
+      "at": "2026-10-22T07:38:07.660Z"
+    },
+    {
+      "type": "run_settled",
+      "source": "orchestrator",
+      "runId": "run_dce67098-d1a6-4024-8c2f-9ae55aa22227",
+      "ok": true,
+      "at": "2026-10-22T07:38:07.660Z"
+    }
+  ]
+}

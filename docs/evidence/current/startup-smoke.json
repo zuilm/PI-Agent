@@ -1,0 +1,14 @@
+{
+  "executedAt": "2026-10-22T09:08:20.992Z",
+  "mode": "actual src/server.ts process + HTTP, no model request",
+  "passed": true,
+  "healthStatus": 200,
+  "pageStatus": 200,
+  "health": {
+    "ok": true,
+    "agent": "pi-rpc",
+    "sandboxMode": "e2b",
+    "modelConfigured": true
+  },
+  "stderr": ""
+}

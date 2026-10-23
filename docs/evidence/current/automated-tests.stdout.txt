@@ -1,0 +1,496 @@
+TAP version 13
+# Subtest: unrecognized tasks go to Pi verbatim without a sort fallback
+ok 1 - unrecognized tasks go to Pi verbatim without a sort fallback
+  ---
+  duration_ms: 4.3785
+  type: 'test'
+  ...
+# Subtest: a task without uploads is accepted by the Pi session
+ok 2 - a task without uploads is accepted by the Pi session
+  ---
+  duration_ms: 0.4654
+  type: 'test'
+  ...
+# Subtest: uploaded filenames and prior artifacts are included as metadata
+ok 3 - uploaded filenames and prior artifacts are included as metadata
+  ---
+  duration_ms: 0.5085
+  type: 'test'
+  ...
+# Subtest: streamed deltas and authoritative model text are both relayed
+ok 4 - streamed deltas and authoritative model text are both relayed
+  ---
+  duration_ms: 0.5006
+  type: 'test'
+  ...
+# Subtest: agent_end does not settle a run before agent_settled
+ok 5 - agent_end does not settle a run before agent_settled
+  ---
+  duration_ms: 6.6408
+  type: 'test'
+  ...
+# Subtest: Pi tool start, update and failure events preserve tool IDs
+ok 6 - Pi tool start, update and failure events preserve tool IDs
+  ---
+  duration_ms: 0.4464
+  type: 'test'
+  ...
+# Subtest: MCP tool events are labeled Pi/MCP rather than E2B
+ok 7 - MCP tool events are labeled Pi/MCP rather than E2B
+  ---
+  duration_ms: 0.4181
+  type: 'test'
+  ...
+# Subtest: final provider errors fail the run without fabricated fallback answers
+ok 8 - final provider errors fail the run without fabricated fallback answers
+  ---
+  duration_ms: 0.3486
+  type: 'test'
+  ...
+# Subtest: Pi can recover from an earlier provider error before settling
+ok 9 - Pi can recover from an earlier provider error before settling
+  ---
+  duration_ms: 0.3145
+  type: 'test'
+  ...
+# Subtest: Pi startup failure is visible
+ok 10 - Pi startup failure is visible
+  ---
+  duration_ms: 0.329
+  type: 'test'
+  ...
+# Subtest: RPC command rejection is visible
+ok 11 - RPC command rejection is visible
+  ---
+  duration_ms: 0.1828
+  type: 'test'
+  ...
+# Subtest: unexpected Pi process exit fails promptly
+ok 12 - unexpected Pi process exit fails promptly
+  ---
+  duration_ms: 0.1707
+  type: 'test'
+  ...
+# Subtest: run timeout asks Pi to abort and records failure
+ok 13 - run timeout asks Pi to abort and records failure
+  ---
+  duration_ms: 25.9069
+  type: 'test'
+  ...
+# Subtest: external cancellation records aborted settlement
+ok 14 - external cancellation records aborted settlement
+  ---
+  duration_ms: 0.3892
+  type: 'test'
+  ...
+# Subtest: handled extension commands do not wait for a nonexistent agent run
+ok 15 - handled extension commands do not wait for a nonexistent agent run
+  ---
+  duration_ms: 0.2235
+  type: 'test'
+  ...
+# Subtest: follow-up reuses the same Pi transport and retains trace
+ok 16 - follow-up reuses the same Pi transport and retains trace
+  ---
+  duration_ms: 1.321
+  type: 'test'
+  ...
+# Subtest: delivery completes before run_settled and delivery failure is visible
+ok 17 - delivery completes before run_settled and delivery failure is visible
+  ---
+  duration_ms: 0.3346
+  type: 'test'
+  ...
+# Subtest: health reports Pi as the runtime
+ok 18 - health reports Pi as the runtime
+  ---
+  duration_ms: 31.311
+  type: 'test'
+  ...
+# Subtest: unknown sessions return 404
+ok 19 - unknown sessions return 404
+  ---
+  duration_ms: 0.9806
+  type: 'test'
+  ...
+# Subtest: session state never exposes bridge authorization token
+ok 20 - session state never exposes bridge authorization token
+  ---
+  duration_ms: 6.1956
+  type: 'test'
+  ...
+# Subtest: upload returns sandbox paths and retains exact input bytes
+ok 21 - upload returns sandbox paths and retains exact input bytes
+  ---
+  duration_ms: 8.4411
+  type: 'test'
+  ...
+# Subtest: same-name files in different sessions remain isolated
+ok 22 - same-name files in different sessions remain isolated
+  ---
+  duration_ms: 3.9303
+  type: 'test'
+  ...
+# Subtest: multipart files over 10 MiB are rejected without updating input state
+ok 23 - multipart files over 10 MiB are rejected without updating input state
+  ---
+  duration_ms: 10.6109
+  type: 'test'
+  ...
+# Subtest: empty and non-string prompts are rejected before Pi is invoked
+ok 24 - empty and non-string prompts are rejected before Pi is invoked
+  ---
+  duration_ms: 4.5395
+  type: 'test'
+  ...
+# Subtest: general prompts without files are accepted and passed to Pi
+ok 25 - general prompts without files are accepted and passed to Pi
+  ---
+  duration_ms: 1.8185
+  type: 'test'
+  ...
+# Subtest: running sessions reject further prompts and uploads
+ok 26 - running sessions reject further prompts and uploads
+  ---
+  duration_ms: 1.2925
+  type: 'test'
+  ...
+# Subtest: bridge rejects missing and incorrect tokens
+ok 27 - bridge rejects missing and incorrect tokens
+  ---
+  duration_ms: 1.4714
+  type: 'test'
+  ...
+# Subtest: bridge tokens are scoped to their own sessions
+ok 28 - bridge tokens are scoped to their own sessions
+  ---
+  duration_ms: 2.571
+  type: 'test'
+  ...
+# Subtest: bridge denies requests outside an active run
+ok 29 - bridge denies requests outside an active run
+  ---
+  duration_ms: 0.975
+  type: 'test'
+  ...
+# Subtest: authorized active bridge requests can read sandbox data
+ok 30 - authorized active bridge requests can read sandbox data
+  ---
+  duration_ms: 3.0778
+  type: 'test'
+  ...
+# Subtest: artifact downloads enforce session ownership and allow text preview
+ok 31 - artifact downloads enforce session ownership and allow text preview
+  ---
+  duration_ms: 1.3843
+  type: 'test'
+  ...
+# Subtest: event IDs increase and real Pi source labels are preserved in API state
+ok 32 - event IDs increase and real Pi source labels are preserved in API state
+  ---
+  duration_ms: 1.0591
+  type: 'test'
+  ...
+# Subtest: files created by Pi are discovered before completion without an explicit publish call
+ok 33 - files created by Pi are discovered before completion without an explicit publish call
+  ---
+  duration_ms: 2.0304
+  type: 'test'
+  ...
+# Subtest: API cancellation stops a pending Pi run
+ok 34 - API cancellation stops a pending Pi run
+  ---
+  duration_ms: 1.217
+  type: 'test'
+  ...
+# Subtest: server close disposes all Pi and sandbox resources
+ok 35 - server close disposes all Pi and sandbox resources
+  ---
+  duration_ms: 3.8199
+  type: 'test'
+  ...
+# Subtest: SSE reconnect replays only records after Last-Event-ID
+ok 36 - SSE reconnect replays only records after Last-Event-ID
+  ---
+  duration_ms: 62.9383
+  type: 'test'
+  ...
+# Subtest: integer parsing accepts comma, whitespace, signs and duplicates
+ok 37 - integer parsing accepts comma, whitespace, signs and duplicates
+  ---
+  duration_ms: 1.8923
+  type: 'test'
+  ...
+# Subtest: integer parsing rejects malformed tokens instead of silently dropping them
+ok 38 - integer parsing rejects malformed tokens instead of silently dropping them
+  ---
+  duration_ms: 0.5663
+  type: 'test'
+  ...
+# Subtest: zero-byte input is rejected
+ok 39 - zero-byte input is rejected
+  ---
+  duration_ms: 0.4423
+  type: 'test'
+  ...
+# Subtest: workspace paths containing backslashes are rejected
+ok 40 - workspace paths containing backslashes are rejected
+  ---
+  duration_ms: 0.1756
+  type: 'test'
+  ...
+# Subtest: workspace sibling paths are rejected
+ok 41 - workspace sibling paths are rejected
+  ---
+  duration_ms: 0.4375
+  type: 'test'
+  ...
+# Subtest: ordinary filenames containing consecutive dots are allowed
+ok 42 - ordinary filenames containing consecutive dots are allowed
+  ---
+  duration_ms: 0.1142
+  type: 'test'
+  ...
+# Subtest: memory test double cannot masquerade as a real code executor
+ok 43 - memory test double cannot masquerade as a real code executor
+  ---
+  duration_ms: 0.197
+  type: 'test'
+  ...
+# Subtest: sorted validator catches a changed multiset
+ok 44 - sorted validator catches a changed multiset
+  ---
+  duration_ms: 0.4326
+  type: 'test'
+  ...
+# Subtest: multiples validator accepts an empty output when no source values qualify
+ok 45 - multiples validator accepts an empty output when no source values qualify
+  ---
+  duration_ms: 0.256
+  type: 'test'
+  ...
+# Subtest: parseNumbers accepts signed integers and zero
+ok 46 - parseNumbers accepts signed integers and zero
+  ---
+  duration_ms: 1.4256
+  type: 'test'
+  ...
+# Subtest: parseNumbers rejects empty input
+ok 47 - parseNumbers rejects empty input
+  ---
+  duration_ms: 0.4871
+  type: 'test'
+  ...
+# Subtest: parseNumbers rejects unsafe integers
+ok 48 - parseNumbers rejects unsafe integers
+  ---
+  duration_ms: 0.2316
+  type: 'test'
+  ...
+# Subtest: Memory Sandbox rejects host paths
+ok 49 - Memory Sandbox rejects host paths
+  ---
+  duration_ms: 0.6183
+  type: 'test'
+  ...
+# Subtest: Memory Sandbox rejects traversal paths
+ok 50 - Memory Sandbox rejects traversal paths
+  ---
+  duration_ms: 0.2024
+  type: 'test'
+  ...
+# Subtest: Memory Sandbox copies uploaded bytes
+ok 51 - Memory Sandbox copies uploaded bytes
+  ---
+  duration_ms: 0.2208
+  type: 'test'
+  ...
+# Subtest: sorted validator accepts duplicate values and reports summary
+ok 52 - sorted validator accepts duplicate values and reports summary
+  ---
+  duration_ms: 0.4585
+  type: 'test'
+  ...
+# Subtest: sorted validator rejects output that is not ascending
+ok 53 - sorted validator rejects output that is not ascending
+  ---
+  duration_ms: 0.2799
+  type: 'test'
+  ...
+# Subtest: sorted validator fails when output cannot be read
+ok 54 - sorted validator fails when output cannot be read
+  ---
+  duration_ms: 0.2325
+  type: 'test'
+  ...
+# Subtest: multiples validator accepts expected descending output
+ok 55 - multiples validator accepts expected descending output
+  ---
+  duration_ms: 0.4021
+  type: 'test'
+  ...
+# Subtest: multiples validator rejects ascending or incomplete output
+ok 56 - multiples validator rejects ascending or incomplete output
+  ---
+  duration_ms: 0.5558
+  type: 'test'
+  ...
+# Subtest: ArtifactStore records content hash and metadata
+ok 57 - ArtifactStore records content hash and metadata
+  ---
+  duration_ms: 1.3872
+  type: 'test'
+  ...
+# Subtest: ArtifactStore preserves session ownership in metadata
+ok 58 - ArtifactStore preserves session ownership in metadata
+  ---
+  duration_ms: 0.2104
+  type: 'test'
+  ...
+# Subtest: bridge file reads and writes preserve exact bytes
+ok 59 - bridge file reads and writes preserve exact bytes
+  ---
+  duration_ms: 6.0493
+  type: 'test'
+  ...
+# Subtest: bridge rejects host paths
+ok 60 - bridge rejects host paths
+  ---
+  duration_ms: 0.8379
+  type: 'test'
+  ...
+# Subtest: bridge rejects traversal
+ok 61 - bridge rejects traversal
+  ---
+  duration_ms: 1.3515
+  type: 'test'
+  ...
+# Subtest: bridge rejects invalid base64 rather than silently corrupting data
+ok 62 - bridge rejects invalid base64 rather than silently corrupting data
+  ---
+  duration_ms: 0.3857
+  type: 'test'
+  ...
+# Subtest: bridge rejects unsupported operations
+ok 63 - bridge rejects unsupported operations
+  ---
+  duration_ms: 0.1733
+  type: 'test'
+  ...
+# Subtest: bridge exec forwards arbitrary commands to the supplied sandbox
+ok 64 - bridge exec forwards arbitrary commands to the supplied sandbox
+  ---
+  duration_ms: 1.1883
+  type: 'test'
+  ...
+# Subtest: bridge exec rejects excessive timeout
+ok 65 - bridge exec rejects excessive timeout
+  ---
+  duration_ms: 0.8384
+  type: 'test'
+  ...
+# Subtest: publication rejects missing output without a success event
+ok 66 - publication rejects missing output without a success event
+  ---
+  duration_ms: 0.7967
+  type: 'test'
+  ...
+# Subtest: publication rejects files outside output directory
+ok 67 - publication rejects files outside output directory
+  ---
+  duration_ms: 0.4852
+  type: 'test'
+  ...
+# Subtest: generic publication records integrity without claiming semantic validation
+ok 68 - generic publication records integrity without claiming semantic validation
+  ---
+  duration_ms: 0.646
+  type: 'test'
+  ...
+# Subtest: numeric validation blocks a wrong artifact
+ok 69 - numeric validation blocks a wrong artifact
+  ---
+  duration_ms: 0.6307
+  type: 'test'
+  ...
+# Subtest: numeric validation requires a source input
+ok 70 - numeric validation requires a source input
+  ---
+  duration_ms: 0.2758
+  type: 'test'
+  ...
+# Subtest: publishing the same content twice does not emit duplicate artifacts
+ok 71 - publishing the same content twice does not emit duplicate artifacts
+  ---
+  duration_ms: 0.4654
+  type: 'test'
+  ...
+# Subtest: generic publication cannot bypass a failed numeric check of identical bytes
+ok 72 - generic publication cannot bypass a failed numeric check of identical bytes
+  ---
+  duration_ms: 0.6218
+  type: 'test'
+  ...
+# Subtest: web configuration and caches relocate with the workspace
+ok 73 - web configuration and caches relocate with the workspace
+  ---
+  duration_ms: 2.2496
+  type: 'test'
+  ...
+# Subtest: native Pi MCP exposes only search and fetch and resolves from session cwd
+ok 74 - native Pi MCP exposes only search and fetch and resolves from session cwd
+  ---
+  duration_ms: 7.4715
+  type: 'test'
+  ...
+# Subtest: actual fetch JSON preserves source URL, access time, status and hash
+ok 75 - actual fetch JSON preserves source URL, access time, status and hash
+  ---
+  duration_ms: 0.6059
+  type: 'test'
+  ...
+# Subtest: structured MCP content and cached responses are recognized
+ok 76 - structured MCP content and cached responses are recognized
+  ---
+  duration_ms: 0.2042
+  type: 'test'
+  ...
+# Subtest: search snippets and absent or malformed bodies cannot become fetched sources
+ok 77 - search snippets and absent or malformed bodies cannot become fetched sources
+  ---
+  duration_ms: 0.3479
+  type: 'test'
+  ...
+# Subtest: failed fetches cannot become fetched sources
+ok 78 - failed fetches cannot become fetched sources
+  ---
+  duration_ms: 0.228
+  type: 'test'
+  ...
+# Subtest: source links reject non-web protocols and embedded credentials
+ok 79 - source links reject non-web protocols and embedded credentials
+  ---
+  duration_ms: 0.2539
+  type: 'test'
+  ...
+# Subtest: replayed successful Pi fetch emits web source and preserves tool identity
+ok 80 - replayed successful Pi fetch emits web source and preserves tool identity
+  ---
+  duration_ms: 2.6096
+  type: 'test'
+  ...
+# Subtest: replayed failed fetch and search never emit a source card
+ok 81 - replayed failed fetch and search never emit a source card
+  ---
+  duration_ms: 0.4633
+  type: 'test'
+  ...
+1..81
+# tests 81
+# suites 0
+# pass 81
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 913.2199

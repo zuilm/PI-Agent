@@ -1,0 +1,122 @@
+{
+  "executedAt": "2026-10-22T10:18:07.312Z",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "architecture": "x64"
+  },
+  "runs": [
+    {
+      "name": "typecheck",
+      "mode": "static",
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "startedAt": "2026-10-22T10:18:05.277Z",
+      "completedAt": "2026-10-22T10:18:05.613Z",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "automated-tests",
+      "mode": "unit/injected-HTTP/real-socket-SSE; ReplayPi + memory file storage, no model/code execution",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-reporter=tap",
+        "tests/agent.test.ts",
+        "tests/api.test.ts",
+        "tests/core.test.ts",
+        "tests/storage-validation.test.ts",
+        "tests/tool-gateway.test.ts",
+        "tests/web.test.ts"
+      ],
+      "startedAt": "2026-10-22T10:18:05.613Z",
+      "completedAt": "2026-10-22T10:18:06.598Z",
+      "exitCode": 0,
+      "signal": null,
+      "totals": {
+        "tests": 81,
+        "pass": 81,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "name": "pi-rpc-smoke",
+      "mode": "real-pi.exe/get_state; no model",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/checks/pi-rpc.ts"
+      ],
+      "startedAt": "2026-10-22T10:18:06.598Z",
+      "completedAt": "2026-10-22T10:18:07.182Z",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "response-quality",
+      "mode": "rule evaluation of saved actual model/tool/file evidence; no new model call",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/reports/quality.ts"
+      ],
+      "startedAt": "2026-10-22T10:18:07.183Z",
+      "completedAt": "2026-10-22T10:18:07.294Z",
+      "exitCode": 1,
+      "signal": null
+    }
+  ],
+  "evidence": {
+    "real-e2e": {
+      "executedAt": "2026-10-22T08:51:46.742Z",
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "path": "docs/evidence/current/real-e2e.json"
+    },
+    "response-quality": {
+      "executedAt": "2026-10-22T10:18:07.283Z",
+      "total": 10,
+      "passed": 9,
+      "failed": 1,
+      "path": "docs/evidence/current/response-quality.json"
+    },
+    "ui-smoke": {
+      "executedAt": "2026-10-22T08:46:29.544Z",
+      "passed": true,
+      "mode": "real Edge browser + real model/Pi/E2B",
+      "path": "docs/evidence/current/ui-smoke.json"
+    },
+    "web/mcp-check": {
+      "executedAt": "2026-10-22T10:11:17.940Z",
+      "passed": true,
+      "mode": "real wigolo stdio MCP/network; diagnostic SDK, no model",
+      "path": "docs/evidence/current/web/mcp-check.json"
+    },
+    "web/real-e2e": {
+      "executedAt": "2026-10-22T10:17:39.284Z",
+      "total": 3,
+      "passed": 3,
+      "mode": "real model/Pi native MCP/wigolo/E2B/HTTP/SSE",
+      "path": "docs/evidence/current/web/real-e2e.json"
+    },
+    "web/ui-smoke": {
+      "executedAt": "2026-10-22T09:49:46.729Z",
+      "passed": true,
+      "mode": "real Edge/Chromium UI + model/Pi native MCP/wigolo/E2B",
+      "path": "docs/evidence/current/web/ui-smoke.json"
+    }
+  },
+  "note": "Saved real evidence timestamps are separate from this audit. Use --real/--ui for Coding runs and --web/--web-ui for web runs; the default only evaluates saved real responses."
+}

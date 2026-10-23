@@ -1,0 +1,53 @@
+{
+  "executedAt": "2026-10-22T07:43:21.459Z",
+  "mode": "MemorySandboxProvider; no real E2B or model call",
+  "scope": "Four additional general-task probes; separate from the prior 47 assertion tests and 34-case matrix",
+  "total": 4,
+  "passed": 0,
+  "probes": [
+    {
+      "id": "G01",
+      "prompt": "计算文件中整数的总和和平均值，直接汇报结果",
+      "input": "3 1 2 2",
+      "expected": "总和 8，平均值 2",
+      "actual": "1\n2\n2\n3\n",
+      "status": "idle",
+      "answer": "已完成排序：共 4 个整数，最小值 1，最大值 3。输出文件已写入 /workspace/output/sorted_numbers_asc.txt，文件名为 sorted_numbers_asc.txt。结果来自确定性脚本在 Memory Sandbox 中执行，并经过结果校验；不是 Pi 模型直接输出。",
+      "purpose": "sort_numbers",
+      "passed": false
+    },
+    {
+      "id": "G02",
+      "prompt": "删除重复整数，并按降序输出文件",
+      "input": "3 1 2 2",
+      "expected": "3\n2\n1\n",
+      "actual": "1\n2\n2\n3\n",
+      "status": "idle",
+      "answer": "已完成排序：共 4 个整数，最小值 1，最大值 3。输出文件已写入 /workspace/output/sorted_numbers_asc.txt，文件名为 sorted_numbers_asc.txt。结果来自确定性脚本在 Memory Sandbox 中执行，并经过结果校验；不是 Pi 模型直接输出。",
+      "purpose": "sort_numbers",
+      "passed": false
+    },
+    {
+      "id": "G03",
+      "prompt": "只保留偶数并生成结果文件",
+      "input": "3 1 2 2",
+      "expected": "2\n2\n",
+      "actual": "1\n2\n2\n3\n",
+      "status": "idle",
+      "answer": "已完成排序：共 4 个整数，最小值 1，最大值 3。输出文件已写入 /workspace/output/sorted_numbers_asc.txt，文件名为 sorted_numbers_asc.txt。结果来自确定性脚本在 Memory Sandbox 中执行，并经过结果校验；不是 Pi 模型直接输出。",
+      "purpose": "sort_numbers",
+      "passed": false
+    },
+    {
+      "id": "G04",
+      "prompt": "筛选能被 3 整除的数字并生成文件",
+      "input": "3 1 2 2",
+      "expected": "3\n",
+      "actual": "1\n2\n2\n3\n",
+      "status": "idle",
+      "answer": "已完成排序：共 4 个整数，最小值 1，最大值 3。输出文件已写入 /workspace/output/sorted_numbers_asc.txt，文件名为 sorted_numbers_asc.txt。结果来自确定性脚本在 Memory Sandbox 中执行，并经过结果校验；不是 Pi 模型直接输出。",
+      "purpose": "sort_numbers",
+      "passed": false
+    }
+  ]
+}

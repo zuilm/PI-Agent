@@ -1,0 +1,19 @@
+{
+  "executedAt": "2026-10-22T10:55:02.711Z",
+  "mode": "real Edge browser + ReplayPi + MemorySandbox (no model or remote execution)",
+  "passed": true,
+  "checks": [
+    "packaged assets load, clean welcome, lazy sandbox creation",
+    "suggestion fills composer without submitting",
+    "file selection automatically uploads and shows sandbox path",
+    "start/update/finish consolidate into one card per tool",
+    "UI/RAW switch and previous/next tool navigation",
+    "audit, real memory file metadata, preview and browser download",
+    "readable Markdown, unsafe HTML and URLs remain inert",
+    "copy, rename and collapsible navigation",
+    "session switching preserves draft and running session; stop is real API cancellation",
+    "failed upload exposes retry and retry succeeds",
+    "responsive widths 1280/950/768/390, mobile navigation and workspace drawer",
+    "zero browser JavaScript exceptions"
+  ]
+}

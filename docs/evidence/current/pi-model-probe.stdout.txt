@@ -1,0 +1,185 @@
+{
+  "status": "idle",
+  "events": [
+    {
+      "type": "run_started",
+      "source": "orchestrator",
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "sessionId": "session_983087cd-b7af-4a0d-ae44-d540ae266b22",
+      "at": "2026-10-22T08:59:28.338Z",
+      "eventId": 1
+    },
+    {
+      "type": "assistant_start",
+      "source": "pi-model",
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "messageId": "message_c536037e-5391-4fa5-9096-4a4229fccf86",
+      "at": "2026-10-22T08:59:29.858Z",
+      "eventId": 2
+    },
+    {
+      "type": "assistant_message",
+      "source": "pi-model",
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "messageId": "message_c536037e-5391-4fa5-9096-4a4229fccf86",
+      "text": "",
+      "at": "2026-10-22T08:59:30.144Z",
+      "eventId": 3
+    },
+    {
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "toolCallId": "call_98ef38a08a044cf19d98ba",
+      "name": "bash",
+      "executor": "E2B Sandbox",
+      "source": "sandbox",
+      "at": "2026-10-22T08:59:30.144Z",
+      "type": "tool_started",
+      "args": {
+        "command": "printf 'PI_E2B_CONNECTED\\n'"
+      },
+      "eventId": 4
+    },
+    {
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "toolCallId": "call_98ef38a08a044cf19d98ba",
+      "name": "bash",
+      "executor": "E2B Sandbox",
+      "source": "sandbox",
+      "at": "2026-10-22T08:59:30.148Z",
+      "type": "tool_update",
+      "result": {
+        "content": []
+      },
+      "eventId": 5
+    },
+    {
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "toolCallId": "call_98ef38a08a044cf19d98ba",
+      "name": "bash",
+      "executor": "E2B Sandbox",
+      "source": "sandbox",
+      "at": "2026-10-22T08:59:30.607Z",
+      "type": "tool_update",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "PI_E2B_CONNECTED\n"
+          }
+        ],
+        "details": {}
+      },
+      "eventId": 6
+    },
+    {
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "toolCallId": "call_98ef38a08a044cf19d98ba",
+      "name": "bash",
+      "executor": "E2B Sandbox",
+      "source": "sandbox",
+      "at": "2026-10-22T08:59:30.608Z",
+      "type": "tool_finished",
+      "status": "ok",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "PI_E2B_CONNECTED\n"
+          }
+        ],
+        "structuredContent": {
+          "output": "PI_E2B_CONNECTED\n",
+          "truncated": false,
+          "exit_code": 0,
+          "wall_time_seconds": 0.5
+        }
+      },
+      "eventId": 7
+    },
+    {
+      "type": "assistant_start",
+      "source": "pi-model",
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "messageId": "message_32fe19a5-4293-4170-94da-ea95531e9978",
+      "at": "2026-10-22T08:59:31.074Z",
+      "eventId": 8
+    },
+    {
+      "type": "assistant_delta",
+      "source": "pi-model",
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "messageId": "message_32fe19a5-4293-4170-94da-ea95531e9978",
+      "delta": "命令",
+      "at": "2026-10-22T08:59:31.074Z",
+      "eventId": 9
+    },
+    {
+      "type": "assistant_delta",
+      "source": "pi-model",
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "messageId": "message_32fe19a5-4293-4170-94da-ea95531e9978",
+      "delta": "执行成功，",
+      "at": "2026-10-22T08:59:31.105Z",
+      "eventId": 10
+    },
+    {
+      "type": "assistant_delta",
+      "source": "pi-model",
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "messageId": "message_32fe19a5-4293-4170-94da-ea95531e9978",
+      "delta": "输出为：",
+      "at": "2026-10-22T08:59:31.163Z",
+      "eventId": 11
+    },
+    {
+      "type": "assistant_delta",
+      "source": "pi-model",
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "messageId": "message_32fe19a5-4293-4170-94da-ea95531e9978",
+      "delta": "PI",
+      "at": "2026-10-22T08:59:31.228Z",
+      "eventId": 12
+    },
+    {
+      "type": "assistant_delta",
+      "source": "pi-model",
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "messageId": "message_32fe19a5-4293-4170-94da-ea95531e9978",
+      "delta": "_E2B_CONNECTED",
+      "at": "2026-10-22T08:59:31.347Z",
+      "eventId": 13
+    },
+    {
+      "type": "assistant_message",
+      "source": "pi-model",
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "messageId": "message_32fe19a5-4293-4170-94da-ea95531e9978",
+      "text": "命令执行成功，输出为：PI_E2B_CONNECTED",
+      "at": "2026-10-22T08:59:31.398Z",
+      "eventId": 14
+    },
+    {
+      "type": "run_settled",
+      "source": "orchestrator",
+      "runId": "run_8d59ca3f-146e-4fe6-a570-fad3ff5581c8",
+      "ok": true,
+      "at": "2026-10-22T08:59:31.824Z",
+      "eventId": 15
+    }
+  ],
+  "traceTypes": [
+    "response",
+    "agent_start",
+    "turn_start",
+    "message_start",
+    "message_end",
+    "message_update",
+    "tool_execution_start",
+    "tool_execution_update",
+    "tool_execution_end",
+    "turn_end",
+    "agent_end",
+    "agent_settled"
+  ],
+  "stderr": ""
+}
